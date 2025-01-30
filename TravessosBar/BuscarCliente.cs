@@ -196,6 +196,7 @@ namespace TravessosBar
             }
             updatePanel.Visible = true;
             updatePanel.Location = new Point(317, 167);
+            idAtt.Text = gridCliente.SelectedRows[0].Cells[0].Value.ToString();
             nomeAtt.Text = gridCliente.SelectedRows[0].Cells[1].Value.ToString();
             cpfAtt.Text = gridCliente.SelectedRows[0].Cells[2].Value.ToString();
         }
