@@ -16,8 +16,15 @@ namespace TravessosBar
         {
             try
             {
-                SqlCommand comando = new SqlCommand("INSERT INTO Caixa (nome, login, senha) " +
-                                                    "VALUES ('DAVID', 'DAVID', '123')", this.sqlServer.Conn);
+                SqlCommand comando = new SqlCommand("CREATE TABLE " +
+                    "Caixa (id INT ITENTITY PRIMARY KEY NOT NULL ," +
+                    "nome char(50) NOT NULL, " +
+                    "login char(16) NOT NULL, " +
+                    "senha CHAR(16) NOT NULL", this.sqlServer.Conn);
+
+                comando = new SqlCommand("INSERT INTO Caixa (nome, login, senha) " +
+                                                    "VALUES ('ADMIN', 'ADMIN', '123')", this.sqlServer.Conn);
+
                 comando.ExecuteNonQuery();
             }
             catch { }

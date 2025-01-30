@@ -24,6 +24,9 @@ namespace TravessosBar
             this.realizarPedido = realizarPedido;
         }
 
+        public BuscaCpf(SQLServer sqlServer) { }
+
+
         private void botaoBuscar_Click(object sender, EventArgs e)
         {
             string cpf = campoCpf.Text;

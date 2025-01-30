@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.Fundo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.totalPreco = new System.Windows.Forms.Label();
             this.botaoRemoverItem = new System.Windows.Forms.Button();
-            this.numeroMesa = new System.Windows.Forms.TextBox();
             this.botaoBuscarCliente = new System.Windows.Forms.Button();
             this.botaoFinalizarPedido = new System.Windows.Forms.Button();
             this.botaoLimpar = new System.Windows.Forms.Button();
@@ -209,16 +208,6 @@
             this.botaoRemoverItem.UseVisualStyleBackColor = false;
             this.botaoRemoverItem.Click += new System.EventHandler(this.botaoRemoverItem_Click);
             // 
-            // numeroMesa
-            // 
-            this.numeroMesa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.numeroMesa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numeroMesa.Location = new System.Drawing.Point(260, 87);
-            this.numeroMesa.Name = "numeroMesa";
-            this.numeroMesa.Size = new System.Drawing.Size(100, 27);
-            this.numeroMesa.TabIndex = 11;
-            this.numeroMesa.Text = "MESA";
-            // 
             // botaoBuscarCliente
             // 
             this.botaoBuscarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -294,14 +283,14 @@
             // produtosGrid
             // 
             this.produtosGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.produtosGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.produtosGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.produtosGrid.Location = new System.Drawing.Point(19, 52);
             this.produtosGrid.Name = "produtosGrid";
             this.produtosGrid.ReadOnly = true;
@@ -359,7 +348,6 @@
             this.Controls.Add(this.botaoLimpar);
             this.Controls.Add(this.botaoFinalizarPedido);
             this.Controls.Add(this.botaoBuscarCliente);
-            this.Controls.Add(this.numeroMesa);
             this.Controls.Add(this.botaoRemoverItem);
             this.Controls.Add(this.totalPreco);
             this.Controls.Add(this.label2);
@@ -391,7 +379,6 @@
         private System.Windows.Forms.Button addProduto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button botaoRemoverItem;
-        private System.Windows.Forms.TextBox numeroMesa;
         private System.Windows.Forms.Button botaoBuscarCliente;
         private System.Windows.Forms.Button botaoFinalizarPedido;
         private System.Windows.Forms.Button botaoLimpar;

@@ -73,7 +73,6 @@ namespace TravessosBar
             try
             {
                 string nome = clientePedido.Text;
-                int mesa = int.Parse(numeroMesa.Text);
                 if(listaProdutos.Items.Count == 0)
                 {
                     MessageBox.Show("Não há produtos na lista!!!", "ERRO!!!");
@@ -86,31 +85,25 @@ namespace TravessosBar
                 }
             }
             catch
-            {
-                MessageBox.Show("Insira um número válido de mesa");
-                return;
-            }
+            { }
+            
 
             
             Pedido pedido = new Pedido();
             String totalString = totalPreco.Text.ToString();
             String[] split = totalString.Split(' ');
-            
             double totalBanco = double.Parse(split[1]);
             pedido.inserirPedido(idClienteBox.Text, clientePedido.Text, totalBanco);
             ListaProdutos produtosLista = new ListaProdutos(sqlServer);
-            SqlCommand comando = new SqlCommand($"select MAX(id) as id from Pedido where cliente_id = '{idClienteBox.Text}'", sqlServer.Conn);
 
+            SqlCommand comando = new SqlCommand($"select MAX(id) as id from Pedido where cliente_id = '{idClienteBox.Text}'", sqlServer.Conn);
             SqlDataReader select = comando.ExecuteReader();
-            
+
+            select.Read();
             foreach (ListViewItem item in listaProdutos.Items){
-                select.Read();
-                MessageBox.Show(item.SubItems[1].Text);
                 produtosLista.inserirProdutos(select["id"].ToString(), item.SubItems[0].Text, item.SubItems[1].Text);
-                select.Close();
             }
             
-
             MensagemSucesso sucesso = new MensagemSucesso(this, panelRealizarPedido);
             panelRealizarPedido.Controls.Clear();
             panelRealizarPedido.Anchor = AnchorStyles.Top;

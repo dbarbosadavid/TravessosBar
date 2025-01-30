@@ -38,6 +38,8 @@
             this.botaoVoltar = new System.Windows.Forms.Button();
             this.preco = new System.Windows.Forms.Label();
             this.botaFinaliza = new System.Windows.Forms.Button();
+            this.precosInd = new System.Windows.Forms.Label();
+            this.voltar2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Label
@@ -168,12 +170,46 @@
             this.botaFinaliza.Text = "FINALIZAR PEDIDO";
             this.botaFinaliza.UseMnemonic = false;
             this.botaFinaliza.UseVisualStyleBackColor = false;
+            this.botaFinaliza.Click += new System.EventHandler(this.botaFinaliza_Click);
+            // 
+            // precosInd
+            // 
+            this.precosInd.AutoSize = true;
+            this.precosInd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.precosInd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.precosInd.Location = new System.Drawing.Point(330, 143);
+            this.precosInd.Name = "precosInd";
+            this.precosInd.Size = new System.Drawing.Size(53, 20);
+            this.precosInd.TabIndex = 17;
+            this.precosInd.Text = "precos";
+            this.precosInd.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // voltar2
+            // 
+            this.voltar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.voltar2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.voltar2.CausesValidation = false;
+            this.voltar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.voltar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.voltar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltar2.Location = new System.Drawing.Point(18, 499);
+            this.voltar2.Name = "voltar2";
+            this.voltar2.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.voltar2.Size = new System.Drawing.Size(135, 24);
+            this.voltar2.TabIndex = 18;
+            this.voltar2.Text = "VOLTAR";
+            this.voltar2.UseMnemonic = false;
+            this.voltar2.UseVisualStyleBackColor = false;
+            this.voltar2.Visible = false;
+            this.voltar2.Click += new System.EventHandler(this.voltar2_Click);
             // 
             // ExibePedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
+            this.Controls.Add(this.voltar2);
+            this.Controls.Add(this.precosInd);
             this.Controls.Add(this.botaFinaliza);
             this.Controls.Add(this.preco);
             this.Controls.Add(this.botaoVoltar);
@@ -203,5 +239,7 @@
         private System.Windows.Forms.Button botaoVoltar;
         public System.Windows.Forms.Label preco;
         private System.Windows.Forms.Button botaFinaliza;
+        public System.Windows.Forms.Label precosInd;
+        public System.Windows.Forms.Button voltar2;
     }
 }

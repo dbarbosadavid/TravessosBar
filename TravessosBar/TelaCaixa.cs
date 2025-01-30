@@ -30,8 +30,6 @@ namespace TravessosBar
             cadastrarCliente.Dock = DockStyle.Fill;
         }
 
-        
-
         private void sairPic_Click(object sender, EventArgs e)
         {
             botaoSair_Click(sender, e);
@@ -66,7 +64,7 @@ namespace TravessosBar
         }
 
         private void botaoVerPedido_Click(object sender, EventArgs e)
-        {
+        { 
             Pedidos telaPedidos = new Pedidos(this.main, this.sqlServer);
             this.Controls.Clear();
             this.Controls.Add(telaPedidos);

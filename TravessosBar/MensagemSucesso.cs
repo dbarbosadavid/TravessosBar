@@ -35,12 +35,22 @@ namespace TravessosBar
             this.classePai.idClienteBox.Visible = false;
             ExibePedido exibePedido = new ExibePedido(this.classePai, this.panelPai);
 
-            SqlCommand comando = new SqlCommand($"select MAX(id) as id from Pedido where cliente_id = '{this.classePai.idClienteBox.Text}' groupBy cliente_id", server.Conn);
-
+            SqlCommand comando = new SqlCommand($"select MAX(id) as id, situacao from Pedido where cliente_id = '{this.classePai.idClienteBox.Text}' group by situacao", server.Conn);
             SqlDataReader leitor = comando.ExecuteReader();
+            leitor.Read();
             exibePedido.numeroPedido.Text = leitor["id"].ToString();
             exibePedido.nomeCliente.Text = this.classePai.clientePedido.Text;
             exibePedido.preco.Text = this.classePai.totalPreco.Text;
+            exibePedido.listaProdutos.Text = "";
+            exibePedido.precosInd.Text = "";
+            foreach (ListViewItem item in this.classePai.listaProdutos.Items)
+            {
+                exibePedido.listaProdutos.Text += item.SubItems[0].Text + "\n";
+                exibePedido.precosInd.Text += item.SubItems[1].Text + "\n";
+            }
+            exibePedido.finalizadoPendente.Visible = false;
+            
+             
             this.panelPai.Size = new Size(400, 540);
             this.panelPai.Location = new Point(this.panelPai.Location.X-50, 0);
             this.panelPai.Controls.Clear();

@@ -37,10 +37,10 @@ namespace TravessosBar
             comando.ExecuteNonQuery();
         }
 
-        public void attPedido(String id, String nome, String descricao, double preco)
+        public void attPedido(String id)
         {
             SqlCommand comando = new SqlCommand($"UPDATE Pedido " +
-                $"SET pendente = 'FINALIZADO'" +
+                $"SET situacao = 'FINALIZADO'" +
                 $"WHERE id = {id}", this.sqlServer.Conn);
 
             comando.ExecuteNonQuery();

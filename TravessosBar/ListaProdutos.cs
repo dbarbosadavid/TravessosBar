@@ -30,11 +30,11 @@ namespace TravessosBar
         public void inserirProdutos(String idPedido, String nomeProduto, String precoProduto)
 
         {
-            this.sqlServer.Conn.Dispose();
+            SQLServer server = new SQLServer();
             SqlCommand comando = new SqlCommand("INSERT INTO " +
                                                     "ListaProduto (idPedido, nomeProduto, precoProduto) " +
-                                                    $"VALUES ('{idPedido}', '{nomeProduto}', {precoProduto.Split(',')[1]}.00)", this.sqlServer.Conn);
-            
+                                                    $"VALUES ({idPedido}, '{nomeProduto}', {precoProduto.Split(',')[1]}.00)", server.Conn);
+
             comando.ExecuteNonQuery();
         }
     }
