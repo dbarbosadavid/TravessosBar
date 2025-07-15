@@ -5,7 +5,8 @@ Implementação de um Sistema para registro de Cardápio e de Pedidos que permit
 * Usuários
 * Pedidos
 
-FRONT-END (Windows-Forms)
+FRONT-END (Windows Forms)
+Banco de Dados (SQL-Server)
 
 # Autores
 
