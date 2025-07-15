@@ -4,3 +4,10 @@ Implementação de um Sistema para registro de Cardápio e de Pedidos que permit
 * Produtos
 * Usuários
 * Pedidos
+
+# Autores
+
+* David Barbosa Araujo
+* * dbarbosadavid
+* Igor Mateus Teles
+* * igormteles
