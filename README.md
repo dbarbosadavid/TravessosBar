@@ -8,6 +8,6 @@ Implementação de um Sistema para registro de Cardápio e de Pedidos que permit
 # Autores
 
 * David Barbosa Araujo
-* * dbarbosadavid
+  * dbarbosadavid
 * Igor Mateus Teles
-* * igormteles
+  * igormteles
